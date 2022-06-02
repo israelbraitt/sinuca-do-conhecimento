@@ -1,0 +1,77 @@
+[gd_scene load_steps=12 format=2]
+
+[sub_resource type="SpatialMaterial" id=1]
+albedo_color = Color( 0, 0.501961, 0, 1 )
+
+[sub_resource type="CubeMesh" id=2]
+material = SubResource( 1 )
+size = Vector3( 2.8, 0.2, 1.57 )
+
+[sub_resource type="SpatialMaterial" id=3]
+albedo_color = Color( 0.411765, 0.345098, 0.262745, 1 )
+
+[sub_resource type="CubeMesh" id=4]
+material = SubResource( 3 )
+size = Vector3( 2.8, 0.1, 0.1 )
+
+[sub_resource type="CubeMesh" id=5]
+size = Vector3( 2.8, 0.1, 0.1 )
+
+[sub_resource type="SpatialMaterial" id=6]
+albedo_color = Color( 0.411765, 0.345098, 0.262745, 1 )
+
+[sub_resource type="CubeMesh" id=7]
+size = Vector3( 0.1, 0.1, 1.57 )
+
+[sub_resource type="SpatialMaterial" id=8]
+albedo_color = Color( 0.411765, 0.345098, 0.262745, 1 )
+
+[sub_resource type="SpatialMaterial" id=9]
+albedo_color = Color( 0.411765, 0.345098, 0.262745, 1 )
+
+[sub_resource type="CubeMesh" id=10]
+size = Vector3( 0.1, 0.1, 1.57 )
+
+[sub_resource type="CylinderMesh" id=11]
+top_radius = 0.09
+bottom_radius = 0.09
+height = 0.2
+
+[node name="mesa de sinuca" type="Spatial"]
+
+[node name="fundo" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1425, 0 )
+mesh = SubResource( 2 )
+material/0 = null
+
+[node name="lateral 1" type="MeshInstance" parent="."]
+transform = Transform( 1.06791, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.29293, -0.834827 )
+mesh = SubResource( 4 )
+skeleton = NodePath("../fundo")
+material/0 = null
+
+[node name="lateral 2" type="MeshInstance" parent="."]
+transform = Transform( 1.06515, 0, 0, 0, 1.00122, 0, 0, 0, 1.00122, -0.00476068, 1.29324, 0.828859 )
+mesh = SubResource( 5 )
+skeleton = NodePath("../fundo")
+material/0 = SubResource( 6 )
+
+[node name="lateral 3" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.44611, 1.29311, 0 )
+mesh = SubResource( 7 )
+material/0 = SubResource( 8 )
+
+[node name="lateral 4" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.44598, 1.29293, 0 )
+material_override = SubResource( 9 )
+mesh = SubResource( 10 )
+skeleton = NodePath("../lateral 3")
+material/0 = null
+
+[node name="buraco 1" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.37913, 1.22965, 0.761012 )
+mesh = SubResource( 11 )
+material/0 = null
+
+[node name="OmniLight" type="OmniLight" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.64108, -0.0314335 )

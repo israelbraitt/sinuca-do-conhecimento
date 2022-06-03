@@ -11,6 +11,7 @@ config_version=4
 [application]
 
 config/name="Sinuca do conhecimento"
+run/main_scene="res://mesa de sinuca.tscn"
 config/icon="res://icon.png"
 
 [physics]

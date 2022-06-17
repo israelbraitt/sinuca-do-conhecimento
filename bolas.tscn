@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 [gd_scene load_steps=33 format=2]
+=======
+[gd_scene load_steps=31 format=2]
+>>>>>>> 9a17470c8dfa76e3752c1ebcc88214ecc649127a
 
 [ext_resource path="res://assets/4.png" type="Texture" id=1]
 [ext_resource path="res://assets/8.png" type="Texture" id=2]
@@ -15,7 +19,10 @@
 [ext_resource path="res://assets/6.png" type="Texture" id=13]
 [ext_resource path="res://assets/2.png" type="Texture" id=14]
 [ext_resource path="res://assets/1.png" type="Texture" id=15]
+<<<<<<< HEAD
 [ext_resource path="res://assets/cue_ball.png" type="Texture" id=16]
+=======
+>>>>>>> 9a17470c8dfa76e3752c1ebcc88214ecc649127a
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 20.0
@@ -62,9 +69,12 @@ radius = 20.025
 [sub_resource type="CircleShape2D" id=15]
 radius = 20.0
 
+<<<<<<< HEAD
 [sub_resource type="CircleShape2D" id=16]
 radius = 20.025
 
+=======
+>>>>>>> 9a17470c8dfa76e3752c1ebcc88214ecc649127a
 [node name="bolas" type="Node2D"]
 
 [node name="bola1" type="RigidBody2D" parent="."]
@@ -216,6 +226,7 @@ texture = ExtResource( 9 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="bola15"]
 position = Vector2( 130, 182 )
 shape = SubResource( 15 )
+<<<<<<< HEAD
 
 [node name="bola_branca" type="RigidBody2D" parent="."]
 
@@ -226,3 +237,5 @@ texture = ExtResource( 16 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="bola_branca"]
 position = Vector2( 179, 182 )
 shape = SubResource( 16 )
+=======
+>>>>>>> 9a17470c8dfa76e3752c1ebcc88214ecc649127a

@@ -1,0 +1,228 @@
+[gd_scene load_steps=33 format=2]
+
+[ext_resource path="res://assets/4.png" type="Texture" id=1]
+[ext_resource path="res://assets/8.png" type="Texture" id=2]
+[ext_resource path="res://assets/10.png" type="Texture" id=3]
+[ext_resource path="res://assets/11.png" type="Texture" id=4]
+[ext_resource path="res://assets/13.png" type="Texture" id=5]
+[ext_resource path="res://assets/14.png" type="Texture" id=6]
+[ext_resource path="res://assets/3.png" type="Texture" id=7]
+[ext_resource path="res://assets/12.png" type="Texture" id=8]
+[ext_resource path="res://assets/15.png" type="Texture" id=9]
+[ext_resource path="res://assets/5.png" type="Texture" id=10]
+[ext_resource path="res://assets/9.png" type="Texture" id=11]
+[ext_resource path="res://assets/7.png" type="Texture" id=12]
+[ext_resource path="res://assets/6.png" type="Texture" id=13]
+[ext_resource path="res://assets/2.png" type="Texture" id=14]
+[ext_resource path="res://assets/1.png" type="Texture" id=15]
+[ext_resource path="res://assets/cue_ball.png" type="Texture" id=16]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 20.0
+
+[sub_resource type="CircleShape2D" id=2]
+radius = 20.025
+
+[sub_resource type="CircleShape2D" id=3]
+radius = 20.0
+
+[sub_resource type="CircleShape2D" id=4]
+radius = 20.025
+
+[sub_resource type="CircleShape2D" id=5]
+radius = 20.0
+
+[sub_resource type="CircleShape2D" id=6]
+radius = 20.0
+
+[sub_resource type="CircleShape2D" id=7]
+radius = 20.0
+
+[sub_resource type="CircleShape2D" id=8]
+radius = 20.0998
+
+[sub_resource type="CircleShape2D" id=9]
+radius = 20.025
+
+[sub_resource type="CircleShape2D" id=10]
+radius = 20.0998
+
+[sub_resource type="CircleShape2D" id=11]
+radius = 20.0
+
+[sub_resource type="CircleShape2D" id=12]
+radius = 20.025
+
+[sub_resource type="CircleShape2D" id=13]
+radius = 20.025
+
+[sub_resource type="CircleShape2D" id=14]
+radius = 20.025
+
+[sub_resource type="CircleShape2D" id=15]
+radius = 20.0
+
+[sub_resource type="CircleShape2D" id=16]
+radius = 20.025
+
+[node name="bolas" type="Node2D"]
+
+[node name="bola1" type="RigidBody2D" parent="."]
+
+[node name="Sprite" type="Sprite" parent="bola1"]
+position = Vector2( 31, 30 )
+texture = ExtResource( 15 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bola1"]
+position = Vector2( 31, 30 )
+shape = SubResource( 1 )
+
+[node name="bola2" type="RigidBody2D" parent="."]
+
+[node name="Sprite" type="Sprite" parent="bola2"]
+position = Vector2( 79, 30 )
+texture = ExtResource( 14 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bola2"]
+position = Vector2( 79, 30 )
+shape = SubResource( 2 )
+
+[node name="bola3" type="RigidBody2D" parent="."]
+
+[node name="Sprite" type="Sprite" parent="bola3"]
+position = Vector2( 128, 30 )
+texture = ExtResource( 7 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bola3"]
+position = Vector2( 128, 30 )
+shape = SubResource( 3 )
+
+[node name="bola4" type="RigidBody2D" parent="."]
+
+[node name="Sprite" type="Sprite" parent="bola4"]
+position = Vector2( 177, 30 )
+texture = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bola4"]
+position = Vector2( 177, 30 )
+shape = SubResource( 4 )
+
+[node name="bola5" type="RigidBody2D" parent="."]
+
+[node name="Sprite" type="Sprite" parent="bola5"]
+position = Vector2( 31, 80 )
+texture = ExtResource( 10 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bola5"]
+position = Vector2( 31, 80 )
+shape = SubResource( 5 )
+
+[node name="bola6" type="RigidBody2D" parent="."]
+
+[node name="Sprite" type="Sprite" parent="bola6"]
+position = Vector2( 80, 80 )
+texture = ExtResource( 13 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bola6"]
+position = Vector2( 80, 80 )
+shape = SubResource( 6 )
+
+[node name="bola7" type="RigidBody2D" parent="."]
+
+[node name="Sprite" type="Sprite" parent="bola7"]
+position = Vector2( 128, 80 )
+texture = ExtResource( 12 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bola7"]
+position = Vector2( 128, 80 )
+shape = SubResource( 7 )
+
+[node name="bola8" type="RigidBody2D" parent="."]
+
+[node name="Sprite" type="Sprite" parent="bola8"]
+position = Vector2( 177, 80 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bola8"]
+position = Vector2( 177, 80 )
+shape = SubResource( 8 )
+
+[node name="bola9" type="RigidBody2D" parent="."]
+
+[node name="Sprite" type="Sprite" parent="bola9"]
+position = Vector2( 30, 130 )
+texture = ExtResource( 11 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bola9"]
+position = Vector2( 30, 130 )
+shape = SubResource( 9 )
+
+[node name="bola10" type="RigidBody2D" parent="."]
+
+[node name="Sprite" type="Sprite" parent="bola10"]
+position = Vector2( 79, 131 )
+texture = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bola10"]
+position = Vector2( 79, 131 )
+shape = SubResource( 10 )
+
+[node name="bola11" type="RigidBody2D" parent="."]
+
+[node name="Sprite" type="Sprite" parent="bola11"]
+position = Vector2( 129, 132 )
+texture = ExtResource( 4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bola11"]
+position = Vector2( 129, 132 )
+shape = SubResource( 11 )
+
+[node name="bola12" type="RigidBody2D" parent="."]
+
+[node name="Sprite" type="Sprite" parent="bola12"]
+position = Vector2( 178, 132 )
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bola12"]
+position = Vector2( 178, 132 )
+shape = SubResource( 12 )
+
+[node name="bola13" type="RigidBody2D" parent="."]
+
+[node name="Sprite" type="Sprite" parent="bola13"]
+position = Vector2( 30, 181 )
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bola13"]
+position = Vector2( 30, 181 )
+shape = SubResource( 13 )
+
+[node name="bola14" type="RigidBody2D" parent="."]
+
+[node name="Sprite" type="Sprite" parent="bola14"]
+position = Vector2( 80, 182 )
+texture = ExtResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bola14"]
+position = Vector2( 80, 182 )
+shape = SubResource( 14 )
+
+[node name="bola15" type="RigidBody2D" parent="."]
+
+[node name="Sprite" type="Sprite" parent="bola15"]
+position = Vector2( 130, 182 )
+texture = ExtResource( 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bola15"]
+position = Vector2( 130, 182 )
+shape = SubResource( 15 )
+
+[node name="bola_branca" type="RigidBody2D" parent="."]
+
+[node name="Sprite" type="Sprite" parent="bola_branca"]
+position = Vector2( 179, 182 )
+texture = ExtResource( 16 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bola_branca"]
+position = Vector2( 179, 182 )
+shape = SubResource( 16 )

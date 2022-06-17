@@ -1,0 +1,126 @@
+[gd_scene load_steps=17 format=2]
+
+[sub_resource type="CylinderMesh" id=11]
+top_radius = 0.09
+bottom_radius = 0.09
+height = 0.2
+
+[sub_resource type="SpatialMaterial" id=3]
+albedo_color = Color( 0.411765, 0.345098, 0.262745, 1 )
+
+[sub_resource type="CubeMesh" id=4]
+material = SubResource( 3 )
+size = Vector3( 2.8, 0.1, 0.1 )
+
+[sub_resource type="BoxShape" id=12]
+extents = Vector3( 1.40083, 0.0492888, 0.052251 )
+
+[sub_resource type="CubeMesh" id=5]
+size = Vector3( 2.8, 0.1, 0.1 )
+
+[sub_resource type="SpatialMaterial" id=6]
+albedo_color = Color( 0.411765, 0.345098, 0.262745, 1 )
+
+[sub_resource type="BoxShape" id=13]
+extents = Vector3( 1.4501, 0.0492888, 0.052251 )
+
+[sub_resource type="CubeMesh" id=7]
+size = Vector3( 0.1, 0.1, 1.57 )
+
+[sub_resource type="SpatialMaterial" id=8]
+albedo_color = Color( 0.411765, 0.345098, 0.262745, 1 )
+
+[sub_resource type="BoxShape" id=14]
+extents = Vector3( 0.976505, 0.0492888, 0.052251 )
+
+[sub_resource type="SpatialMaterial" id=9]
+albedo_color = Color( 0.411765, 0.345098, 0.262745, 1 )
+
+[sub_resource type="CubeMesh" id=10]
+size = Vector3( 0.1, 0.1, 1.57 )
+
+[sub_resource type="BoxShape" id=15]
+extents = Vector3( 1.05671, 0.0492888, 0.052251 )
+
+[sub_resource type="SpatialMaterial" id=1]
+albedo_color = Color( 0, 0.501961, 0, 1 )
+
+[sub_resource type="CubeMesh" id=2]
+material = SubResource( 1 )
+size = Vector3( 2.8, 0.2, 1.57 )
+
+[sub_resource type="BoxShape" id=16]
+extents = Vector3( 1, 0.00862912, 1 )
+
+[node name="mesa de sinuca 3d" type="Spatial"]
+
+[node name="buraco1" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.37913, 1.22965, 0.761012 )
+mesh = SubResource( 11 )
+material/0 = null
+
+[node name="lateral1" type="StaticBody" parent="."]
+transform = Transform( 0.984694, 0, 0, 0, 1, 0, 0, 0, 1, 0.00189817, 0, 0 )
+
+[node name="MeshInstance" type="MeshInstance" parent="lateral1"]
+transform = Transform( 1.08675, 0, 0, 0, 1.01022, 0, 0, 0, 1.01022, -0.00272929, 1.29247, -0.833625 )
+mesh = SubResource( 4 )
+skeleton = NodePath("../../fundo/MeshInstance")
+material/0 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="lateral1"]
+transform = Transform( 1.07883, 0, 0, 0, 1.01022, 0, 0, 0, 0.986723, 0, 1.29293, -0.830044 )
+shape = SubResource( 12 )
+
+[node name="lateral2" type="StaticBody" parent="."]
+transform = Transform( 1.06515, 0, 0, 0, 1.00122, 0, 0, 0, 1.00122, -0.00476068, 1.29324, 0.828859 )
+
+[node name="MeshInstance" type="MeshInstance" parent="lateral2"]
+transform = Transform( 1.00155, 0, 0, 0, 0.994049, 0, 0, 0, 0.994049, 0.00558873, -4.05312e-06, 0.00279868 )
+mesh = SubResource( 5 )
+skeleton = NodePath("../../fundo/MeshInstance")
+material/0 = SubResource( 6 )
+
+[node name="CollisionShape" type="CollisionShape" parent="lateral2"]
+transform = Transform( 0.964786, 0, 0, 0, 1.01931, 0, 0, 0, 0.972439, 0.0124426, 0.000439525, -0.00270158 )
+shape = SubResource( 13 )
+
+[node name="lateral3" type="StaticBody" parent="."]
+transform = Transform( 1.16387, 0, 0, 0, 1.02055, 0, 0, 0, 0.973624, 0.132988, 1.29368, 0.826153 )
+
+[node name="MeshInstance" type="MeshInstance" parent="lateral3"]
+transform = Transform( 0.859203, 0, 0, 0, 0.97986, 0, 0, 0, 1.02709, -1.35677, -0.000558496, -0.848534 )
+mesh = SubResource( 7 )
+skeleton = NodePath("../..")
+material/0 = SubResource( 8 )
+
+[node name="CollisionShape" type="CollisionShape" parent="lateral3"]
+transform = Transform( -4.17891e-08, 0, 0.850818, 0, 1.01931, 0, -0.925437, 0, -3.60006e-08, -1.35382, -0.00111008, -0.851914 )
+shape = SubResource( 14 )
+
+[node name="lateral4" type="StaticBody" parent="."]
+transform = Transform( -4.86371e-08, 0, 0.990241, 0, 1.04026, 0, -0.901028, 0, -3.5051e-08, -1.44268, 1.29255, -0.00329071 )
+
+[node name="MeshInstance" type="MeshInstance" parent="lateral4"]
+transform = Transform( -3.92845e-08, 0, -1.10984, 0, 0.961299, 0, 1.00986, 0, -5.45115e-08, -0.00365229, 0.000368118, 2.91713 )
+material_override = SubResource( 9 )
+mesh = SubResource( 10 )
+skeleton = NodePath("../../lateral3/MeshInstance")
+material/0 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="lateral4"]
+transform = Transform( 0.925437, 0, -7.26617e-09, 0, 1.01931, 0, -9.97888e-09, 0, 1.0376, -0.00459386, -0.00111008, 2.91754 )
+shape = SubResource( 15 )
+
+[node name="fundo" type="StaticBody" parent="."]
+transform = Transform( -5.48921e-08, 0, 1.02748, 0, 1.06035, 0, -0.833844, 0, -2.9822e-08, 1.44639, 1.29139, 0.000848379 )
+
+[node name="MeshInstance" type="MeshInstance" parent="fundo"]
+transform = Transform( -3.48081e-08, 0, -1.19926, 0, 0.943089, 0, 0.973257, 0, -6.40696e-08, -0.00335634, -0.140421, -1.41112 )
+mesh = SubResource( 2 )
+skeleton = NodePath("../..")
+material/0 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="fundo"]
+transform = Transform( 0.968465, 0, 8.3165e-08, 0, 0.999999, 0, 1.2423e-07, 0, -1.35689, 5.04078e-08, -0.0494195, -1.4096 )
+shape = SubResource( 16 )

@@ -11,8 +11,9 @@ position = Vector2( 685, 386 )
 position = Vector2( 403, 342 )
 
 [node name="bolas" parent="." instance=ExtResource( 2 )]
-position = Vector2( 548, 220 )
-scale = Vector2( 1.12, 1.12 )
+position = Vector2( 402, 515 )
+rotation = -1.58371
+scale = Vector2( 1.27844, 1.27844 )
 
 [node name="taco" parent="." instance=ExtResource( 1 )]
 position = Vector2( 28, 617 )

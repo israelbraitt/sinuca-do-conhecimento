@@ -1,4 +1,4 @@
-[gd_scene load_steps=51 format=2]
+[gd_scene load_steps=43 format=2]
 
 [ext_resource path="res://assets/Table.png" type="Texture" id=1]
 [ext_resource path="res://assets/14.png" type="Texture" id=2]
@@ -18,22 +18,26 @@
 [ext_resource path="res://assets/Cue.png" type="Texture" id=16]
 [ext_resource path="res://assets/3.png" type="Texture" id=17]
 [ext_resource path="res://assets/7.png" type="Texture" id=18]
-[ext_resource path="res://scripts/bola4.gd" type="Script" id=19]
-[ext_resource path="res://scripts/bola6.gd" type="Script" id=20]
-[ext_resource path="res://scripts/bola7.gd" type="Script" id=21]
-[ext_resource path="res://scripts/bola8.gd" type="Script" id=22]
-[ext_resource path="res://scripts/bola10.gd" type="Script" id=23]
-[ext_resource path="res://scripts/bola14.gd" type="Script" id=24]
-[ext_resource path="res://scripts/bola11.gd" type="Script" id=25]
-[ext_resource path="res://scripts/bola13.gd" type="Script" id=26]
-[ext_resource path="res://scripts/bola9.gd" type="Script" id=27]
-[ext_resource path="res://scripts/bola5.gd" type="Script" id=28]
-[ext_resource path="res://scripts/bola12.gd" type="Script" id=29]
-[ext_resource path="res://scripts/bola15.gd" type="Script" id=30]
-[ext_resource path="res://scripts/bola1.gd" type="Script" id=31]
-[ext_resource path="res://scripts/bola2.gd" type="Script" id=32]
+[ext_resource path="res://scripts/tela_sinuca.gd" type="Script" id=19]
 [ext_resource path="res://scripts/taco.gd" type="Script" id=33]
-[ext_resource path="res://scripts/bola3.gd" type="Script" id=34]
+
+[sub_resource type="CircleShape2D" id=17]
+radius = 36.0
+
+[sub_resource type="CircleShape2D" id=18]
+radius = 35.0571
+
+[sub_resource type="CircleShape2D" id=19]
+radius = 35.0143
+
+[sub_resource type="CircleShape2D" id=20]
+radius = 35.0
+
+[sub_resource type="CircleShape2D" id=21]
+radius = 29.0172
+
+[sub_resource type="CircleShape2D" id=22]
+radius = 29.0
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 20.0
@@ -85,6 +89,7 @@ radius = 20.025
 
 [node name="tela_sinuca" type="Node2D"]
 position = Vector2( 685, 386 )
+script = ExtResource( 19 )
 __meta__ = {
 "_edit_vertical_guides_": [  ]
 }
@@ -152,45 +157,39 @@ polygon = PoolVector2Array( -642, -270, -642, -333, -639, -339, -632, -346, -626
 
 [node name="buraco1" type="Area2D" parent="mesa_de_sinuca"]
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="mesa_de_sinuca/buraco1"]
-position = Vector2( -29, -15 )
-scale = Vector2( 0.95, 0.95 )
-polygon = PoolVector2Array( -624, -330, -619, -335, -613, -339, -606, -342, -598, -343, -588, -343, -581, -341, -574, -337, -569, -332, -565, -327, -562, -321, -560, -315, -559, -308, -559, -301, -560, -295, -562, -290, -565, -285, -569, -280, -576, -274, -584, -270, -594, -269, -604, -270, -613, -273, -619, -277, -625, -283, -629, -290, -631, -296, -632, -303, -632, -309, -631, -316, -629, -323 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="mesa_de_sinuca/buraco1"]
+position = Vector2( -595, -306 )
+shape = SubResource( 17 )
 
 [node name="buraco2" type="Area2D" parent="mesa_de_sinuca"]
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="mesa_de_sinuca/buraco2"]
-position = Vector2( -30, 597 )
-scale = Vector2( 0.95, 0.95 )
-polygon = PoolVector2Array( -624, -330, -619, -335, -613, -339, -606, -342, -598, -343, -588, -342, -581, -340, -574, -337, -569, -332, -565, -327, -562, -321, -560, -315, -559, -308, -559, -301, -560, -295, -562, -290, -565, -285, -569, -280, -576, -274, -584, -270, -594, -269, -604, -270, -613, -273, -619, -277, -625, -283, -629, -290, -631, -296, -632, -303, -632, -309, -631, -316, -629, -323 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="mesa_de_sinuca/buraco2"]
+position = Vector2( -595, 306 )
+shape = SubResource( 18 )
 
 [node name="buraco3" type="Area2D" parent="mesa_de_sinuca"]
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="mesa_de_sinuca/buraco3"]
-position = Vector2( 1161, 596 )
-scale = Vector2( 0.95, 0.95 )
-polygon = PoolVector2Array( -624, -330, -619, -335, -613, -339, -606, -342, -598, -343, -588, -342, -581, -340, -574, -337, -569, -332, -565, -327, -562, -321, -560, -315, -559, -308, -559, -301, -560, -295, -562, -290, -565, -285, -569, -280, -576, -274, -584, -270, -594, -269, -604, -270, -613, -273, -619, -277, -625, -283, -629, -290, -631, -296, -632, -303, -632, -309, -631, -316, -629, -323 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="mesa_de_sinuca/buraco3"]
+position = Vector2( 595, -306 )
+shape = SubResource( 19 )
 
 [node name="buraco4" type="Area2D" parent="mesa_de_sinuca"]
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="mesa_de_sinuca/buraco4"]
-position = Vector2( 1161, -15 )
-scale = Vector2( 0.95, 0.95 )
-polygon = PoolVector2Array( -624, -330, -619, -335, -613, -339, -606, -342, -598, -343, -588, -342, -581, -340, -574, -337, -569, -332, -565, -327, -562, -321, -560, -315, -559, -308, -559, -301, -560, -295, -562, -290, -565, -285, -569, -280, -576, -274, -584, -270, -594, -269, -604, -270, -613, -273, -619, -277, -625, -283, -629, -290, -631, -296, -632, -303, -632, -309, -631, -316, -629, -323 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="mesa_de_sinuca/buraco4"]
+position = Vector2( 595, 306 )
+shape = SubResource( 20 )
 
 [node name="buraco5" type="Area2D" parent="mesa_de_sinuca"]
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="mesa_de_sinuca/buraco5"]
-position = Vector2( 490.076, -70.0783 )
-scale = Vector2( 0.822872, 0.814108 )
-polygon = PoolVector2Array( -624, -330, -619, -335, -613, -339, -606, -342, -598, -343, -588, -342, -581, -340, -574, -337, -569, -332, -565, -327, -562, -321, -560, -315, -559, -308, -559, -301, -560, -295, -562, -290, -565, -285, -569, -280, -576, -274, -584, -270, -594, -269, -604, -270, -613, -273, -619, -277, -625, -283, -629, -290, -631, -296, -632, -303, -632, -309, -631, -316, -629, -323 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="mesa_de_sinuca/buraco5"]
+position = Vector2( 0, -319 )
+shape = SubResource( 21 )
 
 [node name="buraco6" type="Area2D" parent="mesa_de_sinuca"]
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="mesa_de_sinuca/buraco6"]
-position = Vector2( 490, 569 )
-scale = Vector2( 0.822872, 0.814108 )
-polygon = PoolVector2Array( -624, -330, -619, -335, -613, -339, -606, -342, -598, -343, -588, -342, -581, -340, -574, -337, -569, -332, -565, -327, -562, -321, -560, -315, -559, -308, -559, -301, -560, -295, -562, -290, -565, -285, -569, -280, -576, -274, -584, -270, -594, -269, -604, -270, -613, -273, -619, -277, -625, -283, -629, -290, -631, -296, -632, -303, -632, -309, -631, -316, -629, -323 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="mesa_de_sinuca/buraco6"]
+position = Vector2( 0, 320 )
+shape = SubResource( 22 )
 
 [node name="taco" type="KinematicBody2D" parent="."]
 position = Vector2( 388, 342 )
@@ -215,9 +214,8 @@ texture = ExtResource( 6 )
 shape = SubResource( 1 )
 
 [node name="bola1" type="RigidBody2D" parent="."]
-position = Vector2( 672, 337 )
+position = Vector2( 673, 337 )
 gravity_scale = 0.0
-script = ExtResource( 31 )
 
 [node name="Sprite" type="Sprite" parent="bola1"]
 texture = ExtResource( 9 )
@@ -228,7 +226,6 @@ shape = SubResource( 2 )
 [node name="bola2" type="RigidBody2D" parent="."]
 position = Vector2( 711, 359 )
 gravity_scale = 0.0
-script = ExtResource( 32 )
 
 [node name="Sprite" type="Sprite" parent="bola2"]
 texture = ExtResource( 12 )
@@ -239,7 +236,6 @@ shape = SubResource( 3 )
 [node name="bola3" type="RigidBody2D" parent="."]
 position = Vector2( 711, 316 )
 gravity_scale = 0.0
-script = ExtResource( 34 )
 
 [node name="Sprite" type="Sprite" parent="bola3"]
 texture = ExtResource( 17 )
@@ -250,7 +246,6 @@ shape = SubResource( 4 )
 [node name="bola4" type="RigidBody2D" parent="."]
 position = Vector2( 751, 379 )
 gravity_scale = 0.0
-script = ExtResource( 19 )
 
 [node name="Sprite" type="Sprite" parent="bola4"]
 texture = ExtResource( 7 )
@@ -261,7 +256,6 @@ shape = SubResource( 5 )
 [node name="bola5" type="RigidBody2D" parent="."]
 position = Vector2( 751, 336 )
 gravity_scale = 0.0
-script = ExtResource( 28 )
 
 [node name="Sprite" type="Sprite" parent="bola5"]
 texture = ExtResource( 3 )
@@ -272,7 +266,6 @@ shape = SubResource( 6 )
 [node name="bola6" type="RigidBody2D" parent="."]
 position = Vector2( 751, 293 )
 gravity_scale = 0.0
-script = ExtResource( 20 )
 
 [node name="Sprite" type="Sprite" parent="bola6"]
 texture = ExtResource( 8 )
@@ -283,7 +276,6 @@ shape = SubResource( 7 )
 [node name="bola7" type="RigidBody2D" parent="."]
 position = Vector2( 791, 399 )
 gravity_scale = 0.0
-script = ExtResource( 21 )
 
 [node name="Sprite" type="Sprite" parent="bola7"]
 texture = ExtResource( 18 )
@@ -294,7 +286,6 @@ shape = SubResource( 8 )
 [node name="bola8" type="RigidBody2D" parent="."]
 position = Vector2( 791, 356 )
 gravity_scale = 0.0
-script = ExtResource( 22 )
 
 [node name="Sprite" type="Sprite" parent="bola8"]
 texture = ExtResource( 14 )
@@ -305,7 +296,6 @@ shape = SubResource( 9 )
 [node name="bola9" type="RigidBody2D" parent="."]
 position = Vector2( 791, 313 )
 gravity_scale = 0.0
-script = ExtResource( 27 )
 
 [node name="Sprite" type="Sprite" parent="bola9"]
 texture = ExtResource( 4 )
@@ -316,7 +306,6 @@ shape = SubResource( 10 )
 [node name="bola10" type="RigidBody2D" parent="."]
 position = Vector2( 791, 270 )
 gravity_scale = 0.0
-script = ExtResource( 23 )
 
 [node name="Sprite" type="Sprite" parent="bola10"]
 texture = ExtResource( 5 )
@@ -327,7 +316,6 @@ shape = SubResource( 11 )
 [node name="bola11" type="RigidBody2D" parent="."]
 position = Vector2( 830, 422 )
 gravity_scale = 0.0
-script = ExtResource( 25 )
 
 [node name="Sprite" type="Sprite" parent="bola11"]
 texture = ExtResource( 11 )
@@ -338,7 +326,6 @@ shape = SubResource( 12 )
 [node name="bola12" type="RigidBody2D" parent="."]
 position = Vector2( 830, 379 )
 gravity_scale = 0.0
-script = ExtResource( 29 )
 
 [node name="Sprite" type="Sprite" parent="bola12"]
 texture = ExtResource( 13 )
@@ -349,7 +336,6 @@ shape = SubResource( 13 )
 [node name="bola13" type="RigidBody2D" parent="."]
 position = Vector2( 830, 336 )
 gravity_scale = 0.0
-script = ExtResource( 26 )
 
 [node name="Sprite" type="Sprite" parent="bola13"]
 texture = ExtResource( 10 )
@@ -360,7 +346,6 @@ shape = SubResource( 14 )
 [node name="bola14" type="RigidBody2D" parent="."]
 position = Vector2( 830, 293 )
 gravity_scale = 0.0
-script = ExtResource( 24 )
 
 [node name="Sprite" type="Sprite" parent="bola14"]
 texture = ExtResource( 2 )
@@ -371,7 +356,6 @@ shape = SubResource( 15 )
 [node name="bola15" type="RigidBody2D" parent="."]
 position = Vector2( 830, 250 )
 gravity_scale = 0.0
-script = ExtResource( 30 )
 
 [node name="Sprite" type="Sprite" parent="bola15"]
 texture = ExtResource( 15 )
@@ -379,95 +363,9 @@ texture = ExtResource( 15 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="bola15"]
 shape = SubResource( 16 )
 
-[connection signal="body_entered" from="mesa_de_sinuca/buraco1" to="bola1" method="_on_buraco1_body_entered"]
-[connection signal="body_entered" from="mesa_de_sinuca/buraco1" to="bola2" method="_on_buraco1_body_entered"]
-[connection signal="body_entered" from="mesa_de_sinuca/buraco1" to="bola3" method="_on_buraco1_body_entered"]
-[connection signal="body_entered" from="mesa_de_sinuca/buraco1" to="bola4" method="_on_buraco1_body_entered"]
-[connection signal="body_entered" from="mesa_de_sinuca/buraco1" to="bola5" method="_on_buraco1_body_entered"]
-[connection signal="body_entered" from="mesa_de_sinuca/buraco1" to="bola6" method="_on_buraco1_body_entered"]
-[connection signal="body_entered" from="mesa_de_sinuca/buraco1" to="bola7" method="_on_buraco1_body_entered"]
-[connection signal="body_entered" from="mesa_de_sinuca/buraco1" to="bola8" method="_on_buraco1_body_entered"]
-[connection signal="body_entered" from="mesa_de_sinuca/buraco1" to="bola9" method="_on_buraco1_body_entered"]
-[connection signal="body_entered" from="mesa_de_sinuca/buraco1" to="bola10" method="_on_buraco1_body_entered"]
-[connection signal="body_entered" from="mesa_de_sinuca/buraco1" to="bola11" method="_on_buraco1_body_entered"]
-[connection signal="body_entered" from="mesa_de_sinuca/buraco1" to="bola12" method="_on_buraco1_body_entered"]
-[connection signal="body_entered" from="mesa_de_sinuca/buraco1" to="bola13" method="_on_buraco1_body_entered"]
-[connection signal="body_entered" from="mesa_de_sinuca/buraco1" to="bola14" method="_on_buraco1_body_entered"]
-[connection signal="body_entered" from="mesa_de_sinuca/buraco1" to="bola15" method="_on_buraco1_body_entered"]
-[connection signal="body_entered" from="mesa_de_sinuca/buraco2" to="bola1" method="_on_buraco2_body_entered"]
-[connection signal="body_entered" from="mesa_de_sinuca/buraco2" to="bola2" method="_on_buraco2_body_entered"]
-[connection signal="body_entered" from="mesa_de_sinuca/buraco2" to="bola3" method="_on_buraco2_body_entered"]
-[connection signal="body_entered" from="mesa_de_sinuca/buraco2" to="bola4" method="_on_buraco2_body_entered"]
-[connection signal="body_entered" from="mesa_de_sinuca/buraco2" to="bola5" method="_on_buraco2_body_entered"]
-[connection signal="body_entered" from="mesa_de_sinuca/buraco2" to="bola6" method="_on_buraco2_body_entered"]
-[connection signal="body_entered" from="mesa_de_sinuca/buraco2" to="bola7" method="_on_buraco2_body_entered"]
-[connection signal="body_entered" from="mesa_de_sinuca/buraco2" to="bola8" method="_on_buraco2_body_entered"]
-[connection signal="body_entered" from="mesa_de_sinuca/buraco2" to="bola9" method="_on_buraco2_body_entered"]
-[connection signal="body_entered" from="mesa_de_sinuca/buraco2" to="bola10" method="_on_buraco2_body_entered"]
-[connection signal="body_entered" from="mesa_de_sinuca/buraco2" to="bola11" method="_on_buraco2_body_entered"]
-[connection signal="body_entered" from="mesa_de_sinuca/buraco2" to="bola12" method="_on_buraco2_body_entered"]
-[connection signal="body_entered" from="mesa_de_sinuca/buraco2" to="bola13" method="_on_buraco2_body_entered"]
-[connection signal="body_entered" from="mesa_de_sinuca/buraco2" to="bola14" method="_on_buraco2_body_entered"]
-[connection signal="body_entered" from="mesa_de_sinuca/buraco2" to="bola15" method="_on_buraco2_body_entered"]
-[connection signal="body_entered" from="mesa_de_sinuca/buraco3" to="bola1" method="_on_buraco3_body_entered"]
-[connection signal="body_entered" from="mesa_de_sinuca/buraco3" to="bola2" method="_on_buraco3_body_entered"]
-[connection signal="body_entered" from="mesa_de_sinuca/buraco3" to="bola3" method="_on_buraco3_body_entered"]
-[connection signal="body_entered" from="mesa_de_sinuca/buraco3" to="bola4" method="_on_buraco3_body_entered"]
-[connection signal="body_entered" from="mesa_de_sinuca/buraco3" to="bola5" method="_on_buraco3_body_entered"]
-[connection signal="body_entered" from="mesa_de_sinuca/buraco3" to="bola6" method="_on_buraco3_body_entered"]
-[connection signal="body_entered" from="mesa_de_sinuca/buraco3" to="bola7" method="_on_buraco3_body_entered"]
-[connection signal="body_entered" from="mesa_de_sinuca/buraco3" to="bola8" method="_on_buraco3_body_entered"]
-[connection signal="body_entered" from="mesa_de_sinuca/buraco3" to="bola9" method="_on_buraco3_body_entered"]
-[connection signal="body_entered" from="mesa_de_sinuca/buraco3" to="bola10" method="_on_buraco3_body_entered"]
-[connection signal="body_entered" from="mesa_de_sinuca/buraco3" to="bola11" method="_on_buraco3_body_entered"]
-[connection signal="body_entered" from="mesa_de_sinuca/buraco3" to="bola12" method="_on_buraco3_body_entered"]
-[connection signal="body_entered" from="mesa_de_sinuca/buraco3" to="bola13" method="_on_buraco3_body_entered"]
-[connection signal="body_entered" from="mesa_de_sinuca/buraco3" to="bola14" method="_on_buraco3_body_entered"]
-[connection signal="body_entered" from="mesa_de_sinuca/buraco3" to="bola15" method="_on_buraco3_body_entered"]
-[connection signal="body_entered" from="mesa_de_sinuca/buraco4" to="taco" method="_on_buraco4_body_entered"]
-[connection signal="body_entered" from="mesa_de_sinuca/buraco4" to="bola1" method="_on_buraco4_body_entered"]
-[connection signal="body_entered" from="mesa_de_sinuca/buraco4" to="bola2" method="_on_buraco4_body_entered"]
-[connection signal="body_entered" from="mesa_de_sinuca/buraco4" to="bola3" method="_on_buraco4_body_entered"]
-[connection signal="body_entered" from="mesa_de_sinuca/buraco4" to="bola4" method="_on_buraco4_body_entered"]
-[connection signal="body_entered" from="mesa_de_sinuca/buraco4" to="bola5" method="_on_buraco4_body_entered"]
-[connection signal="body_entered" from="mesa_de_sinuca/buraco4" to="bola6" method="_on_buraco4_body_entered"]
-[connection signal="body_entered" from="mesa_de_sinuca/buraco4" to="bola7" method="_on_buraco4_body_entered"]
-[connection signal="body_entered" from="mesa_de_sinuca/buraco4" to="bola8" method="_on_buraco4_body_entered"]
-[connection signal="body_entered" from="mesa_de_sinuca/buraco4" to="bola9" method="_on_buraco4_body_entered"]
-[connection signal="body_entered" from="mesa_de_sinuca/buraco4" to="bola10" method="_on_buraco4_body_entered"]
-[connection signal="body_entered" from="mesa_de_sinuca/buraco4" to="bola11" method="_on_buraco4_body_entered"]
-[connection signal="body_entered" from="mesa_de_sinuca/buraco4" to="bola12" method="_on_buraco4_body_entered"]
-[connection signal="body_entered" from="mesa_de_sinuca/buraco4" to="bola13" method="_on_buraco4_body_entered"]
-[connection signal="body_entered" from="mesa_de_sinuca/buraco4" to="bola14" method="_on_buraco4_body_entered"]
-[connection signal="body_entered" from="mesa_de_sinuca/buraco4" to="bola15" method="_on_buraco4_body_entered"]
-[connection signal="body_entered" from="mesa_de_sinuca/buraco5" to="bola1" method="_on_buraco5_body_entered"]
-[connection signal="body_entered" from="mesa_de_sinuca/buraco5" to="bola2" method="_on_buraco5_body_entered"]
-[connection signal="body_entered" from="mesa_de_sinuca/buraco5" to="bola3" method="_on_buraco5_body_entered"]
-[connection signal="body_entered" from="mesa_de_sinuca/buraco5" to="bola4" method="_on_buraco5_body_entered"]
-[connection signal="body_entered" from="mesa_de_sinuca/buraco5" to="bola5" method="_on_buraco5_body_entered"]
-[connection signal="body_entered" from="mesa_de_sinuca/buraco5" to="bola6" method="_on_buraco5_body_entered"]
-[connection signal="body_entered" from="mesa_de_sinuca/buraco5" to="bola7" method="_on_buraco5_body_entered"]
-[connection signal="body_entered" from="mesa_de_sinuca/buraco5" to="bola8" method="_on_buraco5_body_entered"]
-[connection signal="body_entered" from="mesa_de_sinuca/buraco5" to="bola9" method="_on_buraco5_body_entered"]
-[connection signal="body_entered" from="mesa_de_sinuca/buraco5" to="bola10" method="_on_buraco5_body_entered"]
-[connection signal="body_entered" from="mesa_de_sinuca/buraco5" to="bola11" method="_on_buraco5_body_entered"]
-[connection signal="body_entered" from="mesa_de_sinuca/buraco5" to="bola12" method="_on_buraco5_body_entered"]
-[connection signal="body_entered" from="mesa_de_sinuca/buraco5" to="bola13" method="_on_buraco5_body_entered"]
-[connection signal="body_entered" from="mesa_de_sinuca/buraco5" to="bola14" method="_on_buraco5_body_entered"]
-[connection signal="body_entered" from="mesa_de_sinuca/buraco5" to="bola15" method="_on_buraco5_body_entered"]
-[connection signal="body_entered" from="mesa_de_sinuca/buraco6" to="taco" method="_on_buraco6_body_entered"]
-[connection signal="body_entered" from="mesa_de_sinuca/buraco6" to="bola1" method="_on_buraco6_body_entered"]
-[connection signal="body_entered" from="mesa_de_sinuca/buraco6" to="bola2" method="_on_buraco6_body_entered"]
-[connection signal="body_entered" from="mesa_de_sinuca/buraco6" to="bola3" method="_on_buraco6_body_entered"]
-[connection signal="body_entered" from="mesa_de_sinuca/buraco6" to="bola4" method="_on_buraco6_body_entered"]
-[connection signal="body_entered" from="mesa_de_sinuca/buraco6" to="bola5" method="_on_buraco6_body_entered"]
-[connection signal="body_entered" from="mesa_de_sinuca/buraco6" to="bola6" method="_on_buraco6_body_entered"]
-[connection signal="body_entered" from="mesa_de_sinuca/buraco6" to="bola7" method="_on_buraco6_body_entered"]
-[connection signal="body_entered" from="mesa_de_sinuca/buraco6" to="bola8" method="_on_buraco6_body_entered"]
-[connection signal="body_entered" from="mesa_de_sinuca/buraco6" to="bola9" method="_on_buraco6_body_entered"]
-[connection signal="body_entered" from="mesa_de_sinuca/buraco6" to="bola10" method="_on_buraco6_body_entered"]
-[connection signal="body_entered" from="mesa_de_sinuca/buraco6" to="bola11" method="_on_buraco6_body_entered"]
-[connection signal="body_entered" from="mesa_de_sinuca/buraco6" to="bola12" method="_on_buraco6_body_entered"]
-[connection signal="body_entered" from="mesa_de_sinuca/buraco6" to="bola13" method="_on_buraco6_body_entered"]
-[connection signal="body_entered" from="mesa_de_sinuca/buraco6" to="bola14" method="_on_buraco6_body_entered"]
-[connection signal="body_entered" from="mesa_de_sinuca/buraco6" to="bola15" method="_on_buraco6_body_entered"]
+[connection signal="body_entered" from="mesa_de_sinuca/buraco1" to="." method="_on_buraco1_body_entered"]
+[connection signal="body_entered" from="mesa_de_sinuca/buraco2" to="." method="_on_buraco2_body_entered"]
+[connection signal="body_entered" from="mesa_de_sinuca/buraco3" to="." method="_on_buraco3_body_entered"]
+[connection signal="body_entered" from="mesa_de_sinuca/buraco4" to="." method="_on_buraco4_body_entered"]
+[connection signal="body_entered" from="mesa_de_sinuca/buraco5" to="." method="_on_buraco5_body_entered"]
+[connection signal="body_entered" from="mesa_de_sinuca/buraco6" to="." method="_on_buraco6_body_entered"]

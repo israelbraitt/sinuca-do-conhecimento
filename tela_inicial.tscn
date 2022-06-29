@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://fonts/Ubuntu-Regular.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://fonts/Ubuntu-Bold.ttf" type="DynamicFontData" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://styleboxes tela_inicial/botao_opcoes_normal.stylebox" type="StyleBox" id=7]
 [ext_resource path="res://styleboxes tela_inicial/botao_sair_hover.stylebox" type="StyleBox" id=8]
 [ext_resource path="res://styleboxes tela_inicial/botao_sair_normal.stylebox" type="StyleBox" id=9]
+[ext_resource path="res://tela_inicial.gd" type="Script" id=10]
 
 [sub_resource type="DynamicFont" id=1]
 size = 70
@@ -29,6 +30,7 @@ size = 38
 font_data = ExtResource( 1 )
 
 [node name="tela_inicial" type="Node2D"]
+script = ExtResource( 10 )
 
 [node name="imagem_sinuca" type="Sprite" parent="."]
 position = Vector2( 510.75, 300.75 )
@@ -83,3 +85,6 @@ custom_styles/focus = ExtResource( 9 )
 custom_styles/disabled = ExtResource( 9 )
 custom_styles/normal = ExtResource( 9 )
 text = "Sair"
+
+[connection signal="pressed" from="Button_jogar" to="." method="_on_Button_jogar_pressed"]
+[connection signal="pressed" from="Button_sair" to="." method="_on_Button_sair_pressed"]

@@ -11,7 +11,7 @@ config_version=4
 [application]
 
 config/name="Sinuca do conhecimento"
-run/main_scene="res://tela_sinuca.tscn"
+run/main_scene="res://tela_inicial.tscn"
 config/icon="res://icon.png"
 
 [physics]

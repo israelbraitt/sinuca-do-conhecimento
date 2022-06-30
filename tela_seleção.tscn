@@ -4,8 +4,8 @@
 [ext_resource path="res://fonts/Ubuntu-Bold.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://icons/chemistry.png" type="Texture" id=3]
 [ext_resource path="res://fonts/MPLUS1-SemiBold.ttf" type="DynamicFontData" id=4]
-[ext_resource path="res://tela_seleção.gd" type="Script" id=5]
-[ext_resource path="res://Panel.gd" type="Script" id=6]
+[ext_resource path="res://scripts/tela_seleção.gd" type="Script" id=5]
+[ext_resource path="res://Panel1_seleção.gd" type="Script" id=6]
 [ext_resource path="res://fonts/Ubuntu-Regular.ttf" type="DynamicFontData" id=7]
 
 [sub_resource type="StyleBoxFlat" id=1]
@@ -38,7 +38,7 @@ script = ExtResource( 5 )
 margin_right = 1026.0
 margin_bottom = 601.0
 
-[node name="Panel" type="Panel" parent="."]
+[node name="Panel1_seleção" type="Panel" parent="."]
 margin_left = 83.0
 margin_top = 113.0
 margin_right = 348.0
@@ -46,7 +46,7 @@ margin_bottom = 272.0
 custom_styles/panel = SubResource( 1 )
 script = ExtResource( 6 )
 
-[node name="Label" type="Label" parent="Panel"]
+[node name="Label" type="Label" parent="Panel1_seleção"]
 margin_left = 52.0
 margin_top = 163.0
 margin_right = 215.0
@@ -56,17 +56,17 @@ custom_fonts/font = SubResource( 2 )
 text = "Gases nobres"
 align = 1
 
-[node name="single_player" type="Sprite" parent="Panel"]
+[node name="single_player" type="Sprite" parent="Panel1_seleção"]
 position = Vector2( 232, 136 )
 scale = Vector2( 0.0430908, 0.0430908 )
 texture = ExtResource( 1 )
 
-[node name="Chemistry" type="Sprite" parent="Panel"]
+[node name="Chemistry" type="Sprite" parent="Panel1_seleção"]
 position = Vector2( 153, 20 )
 scale = Vector2( 0.0478516, 0.0478516 )
 texture = ExtResource( 3 )
 
-[node name="Label2" type="Label" parent="Panel"]
+[node name="Label2" type="Label" parent="Panel1_seleção"]
 margin_left = 174.0
 margin_top = 9.0
 margin_right = 239.0

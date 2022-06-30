@@ -9,7 +9,7 @@
 [ext_resource path="res://styleboxes tela_inicial/botao_opcoes_normal.stylebox" type="StyleBox" id=7]
 [ext_resource path="res://styleboxes tela_inicial/botao_sair_hover.stylebox" type="StyleBox" id=8]
 [ext_resource path="res://styleboxes tela_inicial/botao_sair_normal.stylebox" type="StyleBox" id=9]
-[ext_resource path="res://tela_inicial.gd" type="Script" id=10]
+[ext_resource path="res://scripts/tela_inicial.gd" type="Script" id=10]
 
 [sub_resource type="DynamicFont" id=1]
 size = 70

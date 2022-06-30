@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=2]
+[gd_scene load_steps=63 format=2]
 
 [ext_resource path="res://assets/Table.png" type="Texture" id=1]
 [ext_resource path="res://assets/14.png" type="Texture" id=2]
@@ -19,7 +19,40 @@
 [ext_resource path="res://assets/3.png" type="Texture" id=17]
 [ext_resource path="res://assets/7.png" type="Texture" id=18]
 [ext_resource path="res://scripts/tela_sinuca.gd" type="Script" id=19]
+[ext_resource path="res://scripts/bola1.gd" type="Script" id=20]
+[ext_resource path="res://scripts/bola8.gd" type="Script" id=21]
+[ext_resource path="res://scripts/bola9.gd" type="Script" id=22]
+[ext_resource path="res://scripts/bola10.gd" type="Script" id=23]
+[ext_resource path="res://scripts/bola15.gd" type="Script" id=24]
+[ext_resource path="res://scripts/bola11.gd" type="Script" id=25]
+[ext_resource path="res://scripts/bola5.gd" type="Script" id=26]
+[ext_resource path="res://scripts/bola7.gd" type="Script" id=27]
+[ext_resource path="res://scripts/bola13.gd" type="Script" id=28]
+[ext_resource path="res://scripts/bola14.gd" type="Script" id=29]
+[ext_resource path="res://scripts/bola4.gd" type="Script" id=30]
+[ext_resource path="res://scripts/bola6.gd" type="Script" id=31]
+[ext_resource path="res://scripts/bola12.gd" type="Script" id=32]
 [ext_resource path="res://scripts/taco.gd" type="Script" id=33]
+[ext_resource path="res://scripts/bola2.gd" type="Script" id=34]
+[ext_resource path="res://scripts/bola3.gd" type="Script" id=35]
+[ext_resource path="res://fonts/Ubuntu-Regular.ttf" type="DynamicFontData" id=36]
+
+[sub_resource type="DynamicFont" id=23]
+font_data = ExtResource( 36 )
+
+[sub_resource type="DynamicFont" id=24]
+font_data = ExtResource( 36 )
+
+[sub_resource type="DynamicFont" id=25]
+size = 25
+font_data = ExtResource( 36 )
+
+[sub_resource type="StyleBoxFlat" id=26]
+bg_color = Color( 1, 1, 1, 0.466667 )
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
 
 [sub_resource type="CircleShape2D" id=17]
 radius = 36.0
@@ -100,22 +133,220 @@ current = true
 zoom = Vector2( 1.8, 1.8 )
 
 [node name="jogador1" type="Label" parent="."]
-margin_left = 39.0
-margin_top = -188.0
-margin_right = 97.0
-margin_bottom = -174.0
+margin_left = 31.0
+margin_top = -205.0
+margin_right = 102.0
+margin_bottom = -186.0
 rect_scale = Vector2( 3.24, 3.24 )
-rect_pivot_offset = Vector2( 37.963, 7.09877 )
+rect_pivot_offset = Vector2( 36.1226, 3.67323 )
+custom_fonts/font = SubResource( 23 )
 text = "Jogador 1"
 
 [node name="jogador2" type="Label" parent="."]
-margin_left = 660.0
-margin_top = -189.0
-margin_right = 718.0
-margin_bottom = -175.0
+margin_left = 653.0
+margin_top = -192.0
+margin_right = 724.0
+margin_bottom = -173.0
 rect_scale = Vector2( 3.24, 3.24 )
 rect_pivot_offset = Vector2( 37.963, 7.09877 )
+custom_fonts/font = SubResource( 24 )
 text = "Jogador 2"
+
+[node name="pontuação_jogador1" type="Label" parent="."]
+margin_left = -50.0
+margin_top = -146.0
+margin_right = 77.0
+margin_bottom = -95.0
+custom_fonts/font = SubResource( 25 )
+text = "Pontuação: 0
+"
+
+[node name="exibicao_bolas" type="Panel" parent="."]
+margin_left = 1071.0
+margin_top = -101.0
+margin_right = 1221.0
+margin_bottom = 587.0
+custom_styles/panel = SubResource( 26 )
+
+[node name="bola1" type="Sprite" parent="exibicao_bolas"]
+position = Vector2( 39, 36 )
+texture = ExtResource( 9 )
+
+[node name="Label" type="Label" parent="exibicao_bolas/bola1"]
+margin_left = 30.0
+margin_top = -7.0
+margin_right = 98.0
+margin_bottom = 7.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "hidrogênio"
+
+[node name="bola2" type="Sprite" parent="exibicao_bolas"]
+position = Vector2( 39, 80 )
+texture = ExtResource( 12 )
+
+[node name="Label" type="Label" parent="exibicao_bolas/bola2"]
+margin_left = 30.0
+margin_top = -8.0
+margin_right = 70.0
+margin_bottom = 6.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "hélio"
+
+[node name="bola3" type="Sprite" parent="exibicao_bolas"]
+position = Vector2( 39, 123 )
+texture = ExtResource( 17 )
+
+[node name="Label" type="Label" parent="exibicao_bolas/bola3"]
+margin_left = 30.0
+margin_top = -7.0
+margin_right = 92.0
+margin_bottom = 7.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "magnésio"
+
+[node name="bola4" type="Sprite" parent="exibicao_bolas"]
+position = Vector2( 39, 167 )
+texture = ExtResource( 7 )
+
+[node name="Label" type="Label" parent="exibicao_bolas/bola4"]
+margin_left = 30.0
+margin_top = -8.0
+margin_right = 74.0
+margin_bottom = 6.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "neônio"
+
+[node name="bola5" type="Sprite" parent="exibicao_bolas"]
+position = Vector2( 39, 210 )
+texture = ExtResource( 3 )
+
+[node name="Label" type="Label" parent="exibicao_bolas/bola5"]
+margin_left = 30.0
+margin_top = -10.0
+margin_right = 70.0
+margin_bottom = 4.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "cálcio"
+
+[node name="bola6" type="Sprite" parent="exibicao_bolas"]
+position = Vector2( 39, 253 )
+texture = ExtResource( 8 )
+
+[node name="Label" type="Label" parent="exibicao_bolas/bola6"]
+margin_left = 30.0
+margin_top = -9.0
+margin_right = 77.0
+margin_bottom = 5.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "argônio"
+
+[node name="bola7" type="Sprite" parent="exibicao_bolas"]
+position = Vector2( 39, 296 )
+texture = ExtResource( 18 )
+
+[node name="Label" type="Label" parent="exibicao_bolas/bola7"]
+margin_left = 30.0
+margin_top = -8.0
+margin_right = 70.0
+margin_bottom = 6.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "bário"
+
+[node name="bola8" type="Sprite" parent="exibicao_bolas"]
+position = Vector2( 39, 340 )
+texture = ExtResource( 14 )
+
+[node name="Label" type="Label" parent="exibicao_bolas/bola8"]
+margin_left = 30.0
+margin_top = -9.0
+margin_right = 87.0
+margin_bottom = 5.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "criptônio"
+
+[node name="bola9" type="Sprite" parent="exibicao_bolas"]
+position = Vector2( 39, 384 )
+texture = ExtResource( 4 )
+
+[node name="Label" type="Label" parent="exibicao_bolas/bola9"]
+margin_left = 30.0
+margin_top = -7.0
+margin_right = 70.0
+margin_bottom = 7.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "cloro"
+
+[node name="bola10" type="Sprite" parent="exibicao_bolas"]
+position = Vector2( 39, 429 )
+texture = ExtResource( 5 )
+
+[node name="Label" type="Label" parent="exibicao_bolas/bola10"]
+margin_left = 30.0
+margin_top = -8.0
+margin_right = 81.0
+margin_bottom = 6.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "xenônio"
+
+[node name="bola11" type="Sprite" parent="exibicao_bolas"]
+position = Vector2( 39, 473 )
+texture = ExtResource( 11 )
+
+[node name="Label" type="Label" parent="exibicao_bolas/bola11"]
+margin_left = 30.0
+margin_top = -8.0
+margin_right = 70.0
+margin_bottom = 6.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "prata"
+
+[node name="bola12" type="Sprite" parent="exibicao_bolas"]
+position = Vector2( 39, 519 )
+texture = ExtResource( 13 )
+
+[node name="Label" type="Label" parent="exibicao_bolas/bola12"]
+margin_left = 30.0
+margin_top = -8.0
+margin_right = 74.0
+margin_bottom = 6.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "fósforo"
+
+[node name="bola13" type="Sprite" parent="exibicao_bolas"]
+position = Vector2( 39, 564 )
+texture = ExtResource( 10 )
+
+[node name="Label" type="Label" parent="exibicao_bolas/bola13"]
+margin_left = 30.0
+margin_top = -8.0
+margin_right = 78.0
+margin_bottom = 6.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "radônio"
+
+[node name="bola14" type="Sprite" parent="exibicao_bolas"]
+position = Vector2( 39, 608 )
+texture = ExtResource( 2 )
+
+[node name="Label" type="Label" parent="exibicao_bolas/bola14"]
+margin_left = 30.0
+margin_top = -7.0
+margin_right = 84.0
+margin_bottom = 7.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "oxigênio"
+
+[node name="bola15" type="Sprite" parent="exibicao_bolas"]
+position = Vector2( 38, 652 )
+texture = ExtResource( 15 )
+
+[node name="Label" type="Label" parent="exibicao_bolas/bola15"]
+margin_left = 31.0
+margin_top = -7.0
+margin_right = 71.0
+margin_bottom = 7.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "ferro"
 
 [node name="mesa_de_sinuca" type="StaticBody2D" parent="."]
 position = Vector2( 388, 342 )
@@ -216,6 +447,7 @@ shape = SubResource( 1 )
 [node name="bola1" type="RigidBody2D" parent="."]
 position = Vector2( 673, 337 )
 gravity_scale = 0.0
+script = ExtResource( 20 )
 
 [node name="Sprite" type="Sprite" parent="bola1"]
 texture = ExtResource( 9 )
@@ -226,6 +458,7 @@ shape = SubResource( 2 )
 [node name="bola2" type="RigidBody2D" parent="."]
 position = Vector2( 711, 359 )
 gravity_scale = 0.0
+script = ExtResource( 34 )
 
 [node name="Sprite" type="Sprite" parent="bola2"]
 texture = ExtResource( 12 )
@@ -236,6 +469,7 @@ shape = SubResource( 3 )
 [node name="bola3" type="RigidBody2D" parent="."]
 position = Vector2( 711, 316 )
 gravity_scale = 0.0
+script = ExtResource( 35 )
 
 [node name="Sprite" type="Sprite" parent="bola3"]
 texture = ExtResource( 17 )
@@ -246,6 +480,7 @@ shape = SubResource( 4 )
 [node name="bola4" type="RigidBody2D" parent="."]
 position = Vector2( 751, 379 )
 gravity_scale = 0.0
+script = ExtResource( 30 )
 
 [node name="Sprite" type="Sprite" parent="bola4"]
 texture = ExtResource( 7 )
@@ -256,6 +491,7 @@ shape = SubResource( 5 )
 [node name="bola5" type="RigidBody2D" parent="."]
 position = Vector2( 751, 336 )
 gravity_scale = 0.0
+script = ExtResource( 26 )
 
 [node name="Sprite" type="Sprite" parent="bola5"]
 texture = ExtResource( 3 )
@@ -266,6 +502,7 @@ shape = SubResource( 6 )
 [node name="bola6" type="RigidBody2D" parent="."]
 position = Vector2( 751, 293 )
 gravity_scale = 0.0
+script = ExtResource( 31 )
 
 [node name="Sprite" type="Sprite" parent="bola6"]
 texture = ExtResource( 8 )
@@ -276,6 +513,7 @@ shape = SubResource( 7 )
 [node name="bola7" type="RigidBody2D" parent="."]
 position = Vector2( 791, 399 )
 gravity_scale = 0.0
+script = ExtResource( 27 )
 
 [node name="Sprite" type="Sprite" parent="bola7"]
 texture = ExtResource( 18 )
@@ -286,6 +524,7 @@ shape = SubResource( 8 )
 [node name="bola8" type="RigidBody2D" parent="."]
 position = Vector2( 791, 356 )
 gravity_scale = 0.0
+script = ExtResource( 21 )
 
 [node name="Sprite" type="Sprite" parent="bola8"]
 texture = ExtResource( 14 )
@@ -296,6 +535,7 @@ shape = SubResource( 9 )
 [node name="bola9" type="RigidBody2D" parent="."]
 position = Vector2( 791, 313 )
 gravity_scale = 0.0
+script = ExtResource( 22 )
 
 [node name="Sprite" type="Sprite" parent="bola9"]
 texture = ExtResource( 4 )
@@ -306,6 +546,7 @@ shape = SubResource( 10 )
 [node name="bola10" type="RigidBody2D" parent="."]
 position = Vector2( 791, 270 )
 gravity_scale = 0.0
+script = ExtResource( 23 )
 
 [node name="Sprite" type="Sprite" parent="bola10"]
 texture = ExtResource( 5 )
@@ -316,6 +557,7 @@ shape = SubResource( 11 )
 [node name="bola11" type="RigidBody2D" parent="."]
 position = Vector2( 830, 422 )
 gravity_scale = 0.0
+script = ExtResource( 25 )
 
 [node name="Sprite" type="Sprite" parent="bola11"]
 texture = ExtResource( 11 )
@@ -326,6 +568,7 @@ shape = SubResource( 12 )
 [node name="bola12" type="RigidBody2D" parent="."]
 position = Vector2( 830, 379 )
 gravity_scale = 0.0
+script = ExtResource( 32 )
 
 [node name="Sprite" type="Sprite" parent="bola12"]
 texture = ExtResource( 13 )
@@ -336,6 +579,7 @@ shape = SubResource( 13 )
 [node name="bola13" type="RigidBody2D" parent="."]
 position = Vector2( 830, 336 )
 gravity_scale = 0.0
+script = ExtResource( 28 )
 
 [node name="Sprite" type="Sprite" parent="bola13"]
 texture = ExtResource( 10 )
@@ -346,6 +590,7 @@ shape = SubResource( 14 )
 [node name="bola14" type="RigidBody2D" parent="."]
 position = Vector2( 830, 293 )
 gravity_scale = 0.0
+script = ExtResource( 29 )
 
 [node name="Sprite" type="Sprite" parent="bola14"]
 texture = ExtResource( 2 )
@@ -356,6 +601,7 @@ shape = SubResource( 15 )
 [node name="bola15" type="RigidBody2D" parent="."]
 position = Vector2( 830, 250 )
 gravity_scale = 0.0
+script = ExtResource( 24 )
 
 [node name="Sprite" type="Sprite" parent="bola15"]
 texture = ExtResource( 15 )

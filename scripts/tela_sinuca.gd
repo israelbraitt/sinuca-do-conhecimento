@@ -43,10 +43,13 @@ func contabilizar_pontos(resposta) -> void:
 func atualizar_label_pontuacao(pontuacao):
 	get_node("pontuacao_jogador1").set_text("pontuação: " + str(pontuacao))
 
-
 # apaga a bola da mesa de sinuca e ofusca a bola do painel de exibição
 func apagar_bola(body):
 	if (body.name == "bola_branca"):
+		var bola = get_node("/root/tela_sinuca/bola_branca")
+		bola.sleeping = true;
+		bola.position = Vector2(388,342)
+		bola.linear_velocity = Vector2(0,0)
 		contabilizar_pontos(false)
 	elif (body.name == "taco"):
 		pass

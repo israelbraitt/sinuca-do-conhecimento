@@ -1,4 +1,4 @@
-[gd_scene load_steps=63 format=2]
+[gd_scene load_steps=80 format=2]
 
 [ext_resource path="res://assets/Table.png" type="Texture" id=1]
 [ext_resource path="res://assets/14.png" type="Texture" id=2]
@@ -36,6 +36,7 @@
 [ext_resource path="res://scripts/bola2.gd" type="Script" id=34]
 [ext_resource path="res://scripts/bola3.gd" type="Script" id=35]
 [ext_resource path="res://fonts/Ubuntu-Regular.ttf" type="DynamicFontData" id=36]
+[ext_resource path="res://bola_branca.gd" type="Script" id=37]
 
 [sub_resource type="DynamicFont" id=23]
 font_data = ExtResource( 36 )
@@ -72,56 +73,103 @@ radius = 29.0172
 [sub_resource type="CircleShape2D" id=22]
 radius = 29.0
 
+[sub_resource type="PhysicsMaterial" id=27]
+bounce = 0.5
+
 [sub_resource type="CircleShape2D" id=1]
 radius = 20.0
+
+[sub_resource type="PhysicsMaterial" id=28]
+bounce = 0.5
 
 [sub_resource type="CircleShape2D" id=2]
 radius = 20.0
 
+[sub_resource type="PhysicsMaterial" id=29]
+bounce = 0.5
+
 [sub_resource type="CircleShape2D" id=3]
 radius = 20.025
+
+[sub_resource type="PhysicsMaterial" id=30]
+bounce = 0.5
 
 [sub_resource type="CircleShape2D" id=4]
 radius = 20.0
 
+[sub_resource type="PhysicsMaterial" id=31]
+bounce = 0.5
+
 [sub_resource type="CircleShape2D" id=5]
 radius = 20.0
+
+[sub_resource type="PhysicsMaterial" id=32]
+bounce = 0.5
 
 [sub_resource type="CircleShape2D" id=6]
 radius = 20.0998
 
+[sub_resource type="PhysicsMaterial" id=33]
+bounce = 0.5
+
 [sub_resource type="CircleShape2D" id=7]
 radius = 20.025
+
+[sub_resource type="PhysicsMaterial" id=34]
+bounce = 0.5
 
 [sub_resource type="CircleShape2D" id=8]
 radius = 20.0
 
+[sub_resource type="PhysicsMaterial" id=35]
+bounce = 0.5
+
 [sub_resource type="CircleShape2D" id=9]
 radius = 20.025
+
+[sub_resource type="PhysicsMaterial" id=36]
+bounce = 0.5
 
 [sub_resource type="CircleShape2D" id=10]
 radius = 20.0
 
+[sub_resource type="PhysicsMaterial" id=37]
+bounce = 0.5
+
 [sub_resource type="CircleShape2D" id=11]
 radius = 20.0
+
+[sub_resource type="PhysicsMaterial" id=38]
+bounce = 0.5
 
 [sub_resource type="CircleShape2D" id=12]
 radius = 20.0
 
+[sub_resource type="PhysicsMaterial" id=39]
+bounce = 0.5
+
 [sub_resource type="CircleShape2D" id=13]
 radius = 20.025
+
+[sub_resource type="PhysicsMaterial" id=40]
+bounce = 0.5
 
 [sub_resource type="CircleShape2D" id=14]
 radius = 20.0
 
+[sub_resource type="PhysicsMaterial" id=41]
+bounce = 0.5
+
 [sub_resource type="CircleShape2D" id=15]
 radius = 20.025
+
+[sub_resource type="PhysicsMaterial" id=42]
+bounce = 0.5
 
 [sub_resource type="CircleShape2D" id=16]
 radius = 20.025
 
 [node name="tela_sinuca" type="Node2D"]
-position = Vector2( 685, 386 )
 script = ExtResource( 19 )
 __meta__ = {
 "_edit_vertical_guides_": [  ]
@@ -152,7 +200,7 @@ rect_pivot_offset = Vector2( 37.963, 7.09877 )
 custom_fonts/font = SubResource( 24 )
 text = "Jogador 2"
 
-[node name="pontuação_jogador1" type="Label" parent="."]
+[node name="pontuacao_jogador1" type="Label" parent="."]
 margin_left = -50.0
 margin_top = -146.0
 margin_right = 77.0
@@ -430,13 +478,11 @@ script = ExtResource( 33 )
 position = Vector2( -0.5, 356.7 )
 texture = ExtResource( 16 )
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="taco"]
-position = Vector2( -0.5, 357.7 )
-polygon = PoolVector2Array( -5, -319, -2, -320, 2, -320, 5, -319, 6, -316, 6, -311, -6, -311, -6, -316 )
-
 [node name="bola_branca" type="RigidBody2D" parent="."]
 position = Vector2( 388, 342 )
+physics_material_override = SubResource( 27 )
 gravity_scale = 0.0
+script = ExtResource( 37 )
 
 [node name="Sprite" type="Sprite" parent="bola_branca"]
 texture = ExtResource( 6 )
@@ -446,6 +492,7 @@ shape = SubResource( 1 )
 
 [node name="bola1" type="RigidBody2D" parent="."]
 position = Vector2( 673, 337 )
+physics_material_override = SubResource( 28 )
 gravity_scale = 0.0
 script = ExtResource( 20 )
 
@@ -457,6 +504,7 @@ shape = SubResource( 2 )
 
 [node name="bola2" type="RigidBody2D" parent="."]
 position = Vector2( 711, 359 )
+physics_material_override = SubResource( 29 )
 gravity_scale = 0.0
 script = ExtResource( 34 )
 
@@ -468,6 +516,7 @@ shape = SubResource( 3 )
 
 [node name="bola3" type="RigidBody2D" parent="."]
 position = Vector2( 711, 316 )
+physics_material_override = SubResource( 30 )
 gravity_scale = 0.0
 script = ExtResource( 35 )
 
@@ -479,6 +528,7 @@ shape = SubResource( 4 )
 
 [node name="bola4" type="RigidBody2D" parent="."]
 position = Vector2( 751, 379 )
+physics_material_override = SubResource( 31 )
 gravity_scale = 0.0
 script = ExtResource( 30 )
 
@@ -490,6 +540,7 @@ shape = SubResource( 5 )
 
 [node name="bola5" type="RigidBody2D" parent="."]
 position = Vector2( 751, 336 )
+physics_material_override = SubResource( 32 )
 gravity_scale = 0.0
 script = ExtResource( 26 )
 
@@ -501,6 +552,7 @@ shape = SubResource( 6 )
 
 [node name="bola6" type="RigidBody2D" parent="."]
 position = Vector2( 751, 293 )
+physics_material_override = SubResource( 33 )
 gravity_scale = 0.0
 script = ExtResource( 31 )
 
@@ -512,6 +564,7 @@ shape = SubResource( 7 )
 
 [node name="bola7" type="RigidBody2D" parent="."]
 position = Vector2( 791, 399 )
+physics_material_override = SubResource( 34 )
 gravity_scale = 0.0
 script = ExtResource( 27 )
 
@@ -523,6 +576,7 @@ shape = SubResource( 8 )
 
 [node name="bola8" type="RigidBody2D" parent="."]
 position = Vector2( 791, 356 )
+physics_material_override = SubResource( 35 )
 gravity_scale = 0.0
 script = ExtResource( 21 )
 
@@ -534,6 +588,7 @@ shape = SubResource( 9 )
 
 [node name="bola9" type="RigidBody2D" parent="."]
 position = Vector2( 791, 313 )
+physics_material_override = SubResource( 36 )
 gravity_scale = 0.0
 script = ExtResource( 22 )
 
@@ -545,6 +600,7 @@ shape = SubResource( 10 )
 
 [node name="bola10" type="RigidBody2D" parent="."]
 position = Vector2( 791, 270 )
+physics_material_override = SubResource( 37 )
 gravity_scale = 0.0
 script = ExtResource( 23 )
 
@@ -556,6 +612,7 @@ shape = SubResource( 11 )
 
 [node name="bola11" type="RigidBody2D" parent="."]
 position = Vector2( 830, 422 )
+physics_material_override = SubResource( 38 )
 gravity_scale = 0.0
 script = ExtResource( 25 )
 
@@ -567,6 +624,7 @@ shape = SubResource( 12 )
 
 [node name="bola12" type="RigidBody2D" parent="."]
 position = Vector2( 830, 379 )
+physics_material_override = SubResource( 39 )
 gravity_scale = 0.0
 script = ExtResource( 32 )
 
@@ -578,6 +636,7 @@ shape = SubResource( 13 )
 
 [node name="bola13" type="RigidBody2D" parent="."]
 position = Vector2( 830, 336 )
+physics_material_override = SubResource( 40 )
 gravity_scale = 0.0
 script = ExtResource( 28 )
 
@@ -589,6 +648,7 @@ shape = SubResource( 14 )
 
 [node name="bola14" type="RigidBody2D" parent="."]
 position = Vector2( 830, 293 )
+physics_material_override = SubResource( 41 )
 gravity_scale = 0.0
 script = ExtResource( 29 )
 
@@ -600,6 +660,7 @@ shape = SubResource( 15 )
 
 [node name="bola15" type="RigidBody2D" parent="."]
 position = Vector2( 830, 250 )
+physics_material_override = SubResource( 42 )
 gravity_scale = 0.0
 script = ExtResource( 24 )
 

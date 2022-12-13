@@ -12,7 +12,7 @@ Esse é o protótipo de uma plataforma que possibilita o ensino de assuntos vari
 - [Autores](#autores)
 
 ### :8ball: Sobre
-A plataforma desenvolvida tem por objetivo utilizar a gamificação para ensinar assuntos variádos de diversas áreas do conhecimento, utilizando a dinâmica e as mecânicas de um jogo de sinuca. O objetivo é que a plataforma fosse personalizável, podendo adaptadar uma partida para ensinar assuntos de diversas áreas do conhecimento.
+A plataforma desenvolvida tem por objetivo utilizar a gamificação para ensinar assuntos variados de diversas áreas do conhecimento, utilizando a dinâmica e as mecânicas de um jogo de sinuca. O objetivo é que a plataforma fosse personalizável, podendo adaptadar uma partida para ensinar assuntos de diversas áreas do conhecimento.
 
 ### :construction: Prototipação
 Esse projeto é apenas um protótipo, com implementação da tela inicial, tela de seleção de partida e tela da partida para o modo de 1 jogador. O jogador deve encaçapar as bolas cujas respostas correspondem com o assunto relacionado à partida.

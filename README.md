@@ -34,7 +34,7 @@ Para jogar basta interagir com o taco utilizando o mouse. A cada bola encaçapad
 Para utilizar o projeto basta baixar os arquivos desse repositório e importá-los no Godot.
 
 ### :gear: Tecnologias
-otor de jogos Godot na versão 3.4 utilizando a linguagem GDScript.
+Motor de jogos Godot na versão 3.4 utilizando a linguagem GDScript.
 
 ### :black_nib: Autores
 [Israel Braitt](https://github.com/israelbraitt)
